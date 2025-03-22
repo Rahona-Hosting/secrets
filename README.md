@@ -57,10 +57,10 @@ requirepass my_strong_password
 
 3. Update the `.env` file
 
-Main settings that need to be changed :
+Main settings that need to be changed:
 
 For the APP_KEY you can generate it with `php artisan key:generate` or you can use this online
-project : https://laravel-encryption-key-generator.vercel.app/
+project: https://laravel-encryption-key-generator.vercel.app/
 
 ```bash
 APP_KEY=
@@ -131,14 +131,86 @@ For custom installation please refer to the official Laravel 11 documentation.
 
 ### SSO Providers
 
+#### Discord
+
+To use discord's OAuth2, you need to create an application on
+the [discord developper portal](https://discord.com/developers/applications)
+
+Variables to change:
+
+```
+DISCORD_CLIENT_ID=
+DISCORD_CLIENT_SECRET=""
+DISCORD_REDIRECT_URI=https://example.com/auth/discord/callback
+```
+
+#### GitHub
+
+To use GitHub OAuth2, you can follow this
+documentation: [Creating an OAuth app](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app)
+
+Variables to change:
+
+```
+DISCORD_CLIENT_ID=
+DISCORD_CLIENT_SECRET=""
+DISCORD_REDIRECT_URI=https://example.com/auth/discord/callback
+```
+
+#### Google OAuth2
+
+To use Google OAuth2, you need a Google Cloud Console account in order to create your app. You can follow this
+documentation: [Using OAuth 2.0 to Access Google APIs](https://developers.google.com/identity/protocols/oauth2)
+
+Variables to change:
+
+```
+GOOGLE_CLIENT_ID=<>.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=
+GOOGLE_REDIRECT_URI=https://example.com/auth/google/callback
+```
+
+#### Authentik OAuth2
+
+You can create a OAuth2 provider following this
+documentation: [Create an OAuth2 provider](https://docs.goauthentik.io/docs/add-secure-apps/providers/oauth2/create-oauth2-provider)
+
+Variables to change:
+
+```
+AUTHENTIK_BASE_URL="https://authentik.app"
+AUTHENTIK_CLIENT_ID=""
+AUTHENTIK_CLIENT_SECRET=""
+AUTHENTIK_REDIRECT_URI="${APP_URL}/auth/authentik/callback"
+```
+
+#### Generic OAuth2 Provider
+
+You can use these variables to configure a generic OAuth2 provider:
+
+```
+SSO_CLIENT_ID=""
+SSO_CLIENT_SECRET=""
+SSO_REDIRECT_URI="${APP_URL}/auth/generic-sso/callback"
+SSO_AUTH_ENDPOINT="https://generic.app/application/o/authorize/"
+SSO_TOKEN_ENDPOINT="https://generic.app/application/o/token/"
+SSO_USERINFO_ENDPOINT="https://generic.app/application/o/userinfo/"
+```
+
 ### Email Notifications
 
 Configure your SMTP settings in the `.env` file to enable email notifications:
 
 ```
-
+# SMTP Configuration (for notification)
 MAIL_MAILER=smtp
-
+MAIL_SCHEME=null
+MAIL_HOST=smtp.example.com
+MAIL_PORT=587
+MAIL_USERNAME=noreply@example.com
+MAIL_PASSWORD="your_password"
+MAIL_FROM_ADDRESS="noreply@example.com"
+MAIL_FROM_NAME="${APP_NAME}"
 ```
 
 ## 🛣️ Roadmap
@@ -169,8 +241,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 🔒 Security
 
-If you discover any security-related issues, please email security@rahona-hosting.com instead of using the issue
-tracker.
+If you discover any security-related issues, please email security@rahona-hosting.com.
 
 ## 🙏 Acknowledgements
 

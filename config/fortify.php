@@ -101,7 +101,7 @@ return [
     |
     */
 
-    'middleware' => ['web', 'setLocale', 'TrustProxies'],
+    'middleware' => ['web', 'setLocale'],
 
     /*
     |--------------------------------------------------------------------------
