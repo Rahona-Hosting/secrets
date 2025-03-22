@@ -1,0 +1,31 @@
+<?php
+
+return [
+    'title' => 'Authentification à deux facteurs',
+    'setup_success' => 'La double authentification a été correctement configurée',
+    'enable_message' => "Ajoutez une sécurité supplémentaire à votre compte en activant l'authentification à deux facteurs.",
+    'enable_button' => "Activer l'authentification à deux facteurs",
+    'enable_qr_code' => "L'authentification à deux facteurs est maintenant activée. Scannez le QR code suivant avec votre application d'authentification.",
+    'enable_finish_code' => "Pour terminer l'activation, veuillez entrer le code généré par votre application d'authentification :",
+    'enable_finish_code_placeholder' => 'Entrez le code à 6 chiffres',
+    'confirm' => 'Confirmer',
+    'download_backup' => 'Important : Téléchargez vos codes de récupération et conservez-les dans un endroit sûr.',
+    'download_backup_button' => 'Télécharger les codes de récupération',
+    'disable_button' => "Désactiver l'authentification à deux facteurs",
+    'challenge' => [
+        'title' => 'Double authentification',
+        'subtitle' => 'Merci de bien vouloir spécifiez votre code de double authentification.',
+        'message' => "Entrez le code généré par votre application d'authentification.",
+        'error_message' => 'Code incorrect, veuillez réessayer',
+        'submit' => 'Vérifier le code',
+        'or' => 'OU',
+        'backup_code' => 'Utiliser un code de récupération',
+        'backup_code_placeholder' => 'Entrez votre code de récupération',
+        'backup_code_submit' => 'Entrez votre code de récupération',
+        'backup_code_return_otp' => 'Retour au code OTP',
+    ],
+    'backup_code_downloaded' => 'Les codes de récupération ont été téléchargés.',
+    'disabled_message' => "L'authentification à deux facteurs a été désactivée.",
+    'enabled_message' => "L'authentification à deux facteurs a été activée avec succès.",
+    'wrong_code_on_setup' => "Le code fourni n'est pas valide.",
+];

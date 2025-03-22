@@ -1,0 +1,9 @@
+{
+    "preset": "laravel",
+    "rules": {
+        "@PSR2": true
+    },
+    "exclude": [
+        "resources/views/emails"
+    ]
+}

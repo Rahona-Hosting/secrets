@@ -1,0 +1,31 @@
+<?php
+
+return [
+    'title' => 'Kétfaktoros Hitelesítés',
+    'setup_success' => 'A kétfaktoros hitelesítés sikeresen beállításra került',
+    'enable_message' => 'Növelje fiókja biztonságát a kétfaktoros hitelesítés engedélyezésével.',
+    'enable_button' => 'Kétfaktoros Hitelesítés Engedélyezése',
+    'enable_qr_code' => 'A kétfaktoros hitelesítés most már engedélyezve van. Olvassa be a következő QR-kódot hitelesítő alkalmazásával.',
+    'enable_finish_code' => 'A beállítás befejezéséhez adja meg a hitelesítő alkalmazása által generált kódot:',
+    'enable_finish_code_placeholder' => 'Adja meg a 6 számjegyű kódot',
+    'confirm' => 'Megerősítés',
+    'download_backup' => 'Fontos: Töltse le a helyreállítási kódjait, és tárolja biztonságos helyen.',
+    'download_backup_button' => 'Helyreállítási Kódok Letöltése',
+    'disable_button' => 'Kétfaktoros Hitelesítés Letiltása',
+    'challenge' => [
+        'title' => 'Kétfaktoros Hitelesítés',
+        'subtitle' => 'Kérjük, adja meg a kétfaktoros hitelesítési kódját.',
+        'message' => 'Adja meg a hitelesítő alkalmazása által generált kódot.',
+        'error_message' => 'Helytelen kód, kérjük próbálja újra',
+        'submit' => 'Kód Ellenőrzése',
+        'or' => 'VAGY',
+        'backup_code' => 'Helyreállítási Kód Használata',
+        'backup_code_placeholder' => 'Adja meg a helyreállítási kódját',
+        'backup_code_submit' => 'Helyreállítási kód megadása',
+        'backup_code_return_otp' => 'Vissza az OTP kódhoz',
+    ],
+    'backup_code_downloaded' => 'A helyreállítási kódok letöltésre kerültek.',
+    'disabled_message' => 'A kétfaktoros hitelesítés ki lett kapcsolva.',
+    'enabled_message' => 'A kétfaktoros hitelesítés sikeresen engedélyezve lett.',
+    'wrong_code_on_setup' => 'A megadott kód nem érvényes.',
+];

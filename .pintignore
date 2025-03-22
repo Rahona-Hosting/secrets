@@ -1,0 +1,6 @@
+/vendor/*
+/node_modules/*
+/storage/*
+/public/*
+/resources/views/emails/*
+/resources/views/emails/
