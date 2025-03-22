@@ -1,66 +1,85 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Rahona Hosting Secrets
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Rahona Hosting Logo](https://repository-images.githubusercontent.com/952967276/7882aee5-290f-4e50-9b5c-6440e46197f2)
 
-## About Laravel
+## 🔐 Secure Password Sharing Solution
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Rahona Hosting Secrets is an enterprise-grade secure password and sensitive information sharing platform designed to
+safely transmit credentials to clients with full control, tracking, and expiration capabilities.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Laravel](https://img.shields.io/badge/Laravel-11.x-red.svg)](https://laravel.com)
+[![PHP](https://img.shields.io/badge/PHP-8.3+-blue.svg)](https://php.net)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🌟 Features
 
-## Learning Laravel
+- **End-to-end Encryption**: Client-side encryption ensures that sensitive data is never stored in plaintext
+- **Automatic Expiration**: Set custom expiration times for all shared secrets
+- **Access Tracking**: Know exactly when recipients access their credentials
+- **Multi-language Support**: Available in English, French, and Hungarian
+- **Enterprise SSO Integration**: Connect with your existing identity providers
+- **API Support**: Programmatically create and manage secrets
+- **Two-Factor Authentication**: Enhanced security for your account
+- **Email Notifications**: Get alerts when secrets are accessed or expire
+- **Responsive Design**: Works on desktop and mobile devices
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 🚀 Getting Started
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Prerequisites
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- Docker
+- Or PHP 8.3 or higher
 
-## Laravel Sponsors
+### Installation
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🔧 Configuration
 
-### Premium Partners
+### SSO Providers
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### Email Notifications
 
-## Contributing
+Configure your SMTP settings in the `.env` file to enable email notifications:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```
+MAIL_MAILER=smtp
 
-## Code of Conduct
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 🛣️ Roadmap
 
-## Security Vulnerabilities
+Our current development priorities are:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- Implementing comprehensive unit tests to establish code coverage metrics
+- Refactoring certain components to eliminate code duplication
+- Enhancing the API capabilities with additional endpoints
 
-## License
+## 🤝 Contributing
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+We welcome contributions from the community! While we can't guarantee that all issues will be addressed, we appreciate
+your input and will review all pull requests.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🔒 Security
+
+If you discover any security-related issues, please email security@rahona-hosting.com instead of using the issue
+tracker.
+
+## 🙏 Acknowledgements
+
+- [Laravel](https://laravel.com)
+- [Livewire](https://laravel-livewire.com)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Font Awesome](https://fontawesome.com)
+
+---
+
+Developed with ❤️ by [Rahona Hosting](https://rahona-hosting.com)
