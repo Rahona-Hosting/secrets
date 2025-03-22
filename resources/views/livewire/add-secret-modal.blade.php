@@ -146,6 +146,6 @@
             </div>
         </div>
     @endif
-</div>
 
-@vite(['resources/js/secret/encrypt.js', 'resources/js/calendar.js'])
+    @vite(['resources/js/secret/encrypt.js', 'resources/js/calendar.js'])
+</div>

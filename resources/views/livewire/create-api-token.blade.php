@@ -79,6 +79,6 @@
             </div>
         </div>
     @endif
-</div>
 
-@vite(['resources/js/calendar.js'])
+    @vite(['resources/js/calendar.js'])
+</div>

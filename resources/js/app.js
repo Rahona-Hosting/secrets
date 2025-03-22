@@ -1,6 +1,6 @@
 import 'flowbite';
 
-import './auth/password-toogle.js'
+import './auth/password-toggle.js'
 
 window.addEventListener('click', function (e) {
     if (!document.querySelector('[wire\\:id]').contains(e.target)) {
