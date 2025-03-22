@@ -146,7 +146,8 @@ MAIL_MAILER=smtp
 Our current development priorities are:
 
 - Add GDPR job anonymization
--
+- CSP and SRI enforcement
+- Sentry setup
 - Implementing comprehensive unit tests to establish code coverage metrics
 - Refactoring certain components to eliminate code duplication
 - Enhancing the API capabilities with additional endpoints
