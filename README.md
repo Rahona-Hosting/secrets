@@ -4,7 +4,7 @@
 
 ## 🔐 Secure Password Sharing Solution
 
-Rahona Hosting Secrets is an enterprise-grade secure password and sensitive information sharing platform designed to
+Rahona Secrets is an enterprise-grade secure password and sensitive information sharing platform designed to
 safely transmit credentials to clients with full control, tracking, and expiration capabilities.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -28,11 +28,106 @@ safely transmit credentials to clients with full control, tracking, and expirati
 ### Prerequisites
 
 - Docker
-- Or PHP 8.3 or higher
+- Or PHP 8.3+ with sqlite or mariadb/mysql
 
-### Installation
+### Clone the repository
+
+```bash
+git clone https://github.com/Rahona-Hosting/secrets.git
+cd secrets
+```
+
+### Installation with Docker (recommended)
+
+1. Copy config files
+
+```bash
+cp docker-compose.yml.example docker-compose.yml
+cp redis.conf.example redis.conf
+cp .env.docker.example .env
+```
+
+2. Define a password for redis
+
+In the `redis.conf`, replace <define_password> without the <>
+
+```bash
+requirepass my_strong_password
+```
+
+3. Update the `.env` file
+
+Main settings that need to be changed :
+
+For the APP_KEY you can generate it with `php artisan key:generate` or you can use this online
+project : https://laravel-encryption-key-generator.vercel.app/
+
+```bash
+APP_KEY=
+APP_URL=https://example.com
+
+# MySQL secrets (be careful on the DB_HOST)
+MYSQL_ROOT_PASSWORD=""
+MYSQL_DATABASE=""
+MYSQL_USER=""
+MYSQL_PASSWORD=""
+
+# SMTP Configuration (for notification)
+MAIL_MAILER=smtp
+MAIL_HOST=
+MAIL_PORT=587
+MAIL_USERNAME=
+MAIL_PASSWORD=""
+MAIL_FROM_ADDRESS=""
+```
+
+4. Start the docker
+
+```bash
+docker compose up -d
+```
+
+### Installation without Docker (not recommended)
+
+1. Install PHP and NPM dependencies
+
+```bash
+composer install && npm install
+```
+
+2. Create environment file
+
+```bash
+cp .env.example .env
+```
+
+3. Generate application key
+
+```bash
+php artisan key:generate
+```
+
+4. Run database migrations
+
+```bash
+php artisan migrate
+```
+
+5. Build frontend assets
+
+```bash
+npm run build
+```
+
+6. Start the development server
+
+```bash
+php artisan serve
+```
 
 ## 🔧 Configuration
+
+For custom installation please refer to the official Laravel 11 documentation.
 
 ### SSO Providers
 
@@ -41,6 +136,7 @@ safely transmit credentials to clients with full control, tracking, and expirati
 Configure your SMTP settings in the `.env` file to enable email notifications:
 
 ```
+
 MAIL_MAILER=smtp
 
 ```
@@ -49,6 +145,8 @@ MAIL_MAILER=smtp
 
 Our current development priorities are:
 
+- Add GDPR job anonymization
+-
 - Implementing comprehensive unit tests to establish code coverage metrics
 - Refactoring certain components to eliminate code duplication
 - Enhancing the API capabilities with additional endpoints

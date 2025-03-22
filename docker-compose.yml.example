@@ -1,0 +1,73 @@
+---
+services:
+  secrets:
+    restart: always
+    hostname: secrets-prod
+    container_name: secrets-prod
+    image: rahonahosting/secrets:latest
+    labels:
+      #- "com.centurylinklabs.watchtower.enable=true"
+      #- "traefik.docker.network=traefik"
+      #- "traefik.enable=true"
+      #- "traefik.http.routers.r-secrets.rule=Host(`example.com`)"
+      #- "traefik.http.routers.r-secrets.entrypoints=https"
+      #- "traefik.http.routers.r-secrets.tls=true"
+    env_file: .env
+    networks:
+      #- traefik
+      - default
+    depends_on:
+      mariadb:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  task:
+    image: rahonahosting/secrets:latest
+    command: ["php", "/var/www/html/artisan", "schedule:work"]
+    restart: always
+    env_file: .env
+    hostname: secrets-task-prod
+    labels:
+      #- "com.centurylinklabs.watchtower.enable=true"
+    stop_signal: SIGTERM
+    depends_on:
+      mariadb:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "healthcheck-schedule"]
+      start_period: 10s
+
+  redis:
+    restart: always
+    env_file: .env
+    image: redis:alpine
+    command: redis-server /usr/local/etc/redis/redis.conf
+    volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+    healthcheck:
+      test: ["CMD", "redis-cli","ping"]
+
+  mariadb:
+    restart: always
+    image: 'mariadb:10'
+    env_file: .env
+    volumes:
+      - 'mariadb:/var/lib/mysql'
+    healthcheck:
+        test: [ "CMD", "healthcheck.sh", "--connect", "--innodb_initialized" ]
+        start_period: 1m
+        start_interval: 10s
+        interval: 1m
+        timeout: 5s
+        retries: 3
+
+volumes:
+  mariadb:
+    driver: local
+
+#networks:
+#  traefik:
+#    external: true
