@@ -36,6 +36,7 @@ return [
      */
     'middleware' => [
         \Illuminate\Routing\Middleware\SubstituteBindings::class,
+        \Rahona\Http\Middleware\TrustProxies::class,
     ],
 
     /*

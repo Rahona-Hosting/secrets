@@ -86,6 +86,7 @@ class SocialiteController extends Controller
         } catch (Exception $e) {
             // todo sentry
             report($e);
+
             return redirect()->route('login')
                 ->withErrors(['error' => 'Une erreur est survenue lors de la connexion.']);
         }
