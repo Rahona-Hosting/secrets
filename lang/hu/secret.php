@@ -56,6 +56,7 @@ return [
     ],
     'encrypt' => [
         'can_t_empty' => 'A titok nem lehet üres',
+        'not_strong' => 'Kérjük, válasszon egy erős jelszót (minimum 6 karakter).',
     ],
     'decrypt' => [
         'no_empty_password' => 'Kérjük, adjon meg egy jelszót!',

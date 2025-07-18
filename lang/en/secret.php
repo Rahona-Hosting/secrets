@@ -15,6 +15,7 @@ return [
     'view_secret' => 'Secret Preview',
     'secret_deleted' => 'This secret has been destroyed and is no longer available.',
     'secret_e2ee' => 'This secret is end-to-end encrypted. Please enter the password to decrypt it.',
+    'secret_e2ee_not_strong' => 'Merci de choisir un mot de passe robuste (6 caractères minimum).',
     'secret_e2ee_placeholder' => 'Enter decryption password',
     'stats' => 'Statistics',
     'attempts' => 'Access attempts',
@@ -56,6 +57,7 @@ return [
     ],
     'encrypt' => [
         'can_t_empty' => 'The secret cannot be empty',
+        'not_strong' => 'Please choose a strong password (minimum 6 characters).',
     ],
     'decrypt' => [
         'no_empty_password' => 'Please enter a password!',

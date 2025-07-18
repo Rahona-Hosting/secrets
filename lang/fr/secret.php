@@ -56,6 +56,7 @@ return [
     ],
     'encrypt' => [
         'can_t_empty' => 'Le secret ne peut pas être vide',
+        'not_strong' => 'Merci de choisir un mot de passe robuste (6 caractères minimum).',
     ],
     'decrypt' => [
         'no_empty_password' => 'Veuillez entrer un mot de passe !',

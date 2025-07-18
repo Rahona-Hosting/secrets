@@ -45,7 +45,7 @@ document.addEventListener('livewire:init', () => {
                 const password = passwordInput.value;
 
                 if (!password || password.length < 6) {
-                    Livewire.dispatch('encryption-failed', window.t.secret.encrypt.can_t_empty);
+                    Livewire.dispatch('encryption-failed', {message: window.t.secret.encrypt.not_strong});
                     return;
                 }
 
