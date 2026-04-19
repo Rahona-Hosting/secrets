@@ -1,4 +1,4 @@
-FROM serversideup/php:8.3-cli AS builder
+FROM serversideup/php:8.4-cli AS builder
 
 USER root
 
@@ -24,7 +24,7 @@ RUN composer install --no-dev --optimize-autoloader \
     && npm run build
 
 
-FROM serversideup/php:8.3-fpm-nginx
+FROM serversideup/php:8.4-fpm-nginx
 
 ENV AUTORUN_ENABLED=true
 ENV PHP_OPCACHE_ENABLE=true
